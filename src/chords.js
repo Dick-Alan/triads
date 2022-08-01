@@ -5,9 +5,17 @@ import Player from './player';
 
 
 const Chords =(props)=> {
-
+    var color = 'green'
    var chord = []
     const chordList = props.answer.map((a) => {
+        props.answer.indexOf(a) === 0&&(color = 'red')
+        props.answer.indexOf(a) === 1&&(color = 'orange')
+        props.answer.indexOf(a) === 2&&(color = 'yellow')
+        props.answer.indexOf(a) === 3&&(color = 'green')
+        props.answer.indexOf(a) === 4&&(color = 'blue')
+        props.answer.indexOf(a) === 5&&(color = 'indigo')
+        props.answer.indexOf(a) === 6&&(color = 'violet')
+
         if (props.keyz === 'C' && props.major === true) { 
             props.answer.indexOf(a) === 0&&(chord = ['C3', 'E3', 'G3'])
             props.answer.indexOf(a) === 1&&(chord = ["D3", "F3", "A3"])
@@ -236,8 +244,8 @@ const Chords =(props)=> {
         }
         
         return (
-            <div key={a} className="chord"> 
-                <div className="chordscontainer">
+            <div key={a} style={{backgroundImage:  `linear-gradient(to left, white, ${color})` }} className="chord"> 
+                <div className="chordscontainer" >
                     <div className="chordname">{chordName} </div>
                         <div className="chordNotes"> 
                                 <div className="note">{a[0]}</div>

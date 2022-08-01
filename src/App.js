@@ -189,16 +189,19 @@ state = { key: 'C', major: true, chords: [1, 2, 3, 4, 5, 6, 7] }
                         <option value={'B'} > B </option>
                     </select>
                     <br></br>
-                    
+                    <div className='modeselector'>
                     Major
                      <input type="radio" name="majmin" id="majmin" onClick={changeToMajor}></input>
                      minor
                      <input type="radio" name="majmin" id="majmin" onClick={changeToMinor}></input>
 
+                    </div>
+                    
+
 
                     </div>
   
-                    <h2>Key of {this.state.key} {majmin}</h2>
+                    <h1>{this.state.key} {majmin}</h1>
                     <div className="chordsGrid">
                         <Chords answer={answer} keyz={this.state.key} major={this.state.major} chords={this.state.chords}> </Chords>
 
