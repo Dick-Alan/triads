@@ -134,6 +134,24 @@ const Chords =(props)=> {
             props.answer.indexOf(a) === 5&&(chord = ["D3", "F#4", "A4"])
             props.answer.indexOf(a) === 6&&(chord = ['E3', 'G#4', 'B4'])
         }
+        if (props.keyz === 'G' && props.major === true) { 
+            props.answer.indexOf(a) === 0&&(chord = ['G3', 'B3', 'D4'])
+            props.answer.indexOf(a) === 1&&(chord = ["A3", "C3", "E4"])
+            props.answer.indexOf(a) === 2&&(chord = ["B3", "D3", "F#4"])
+            props.answer.indexOf(a) === 3&&(chord = ["C3", "E3", "G4"])
+            props.answer.indexOf(a) === 4&&(chord = ["D4", "F#4", "A4"])
+            props.answer.indexOf(a) === 5&&(chord = ["E3", "G4", "B4"])
+            props.answer.indexOf(a) === 6&&(chord = ['F#3', 'A4', 'C4'])
+        }
+        if (props.keyz === 'G' && props.major === false) { 
+            props.answer.indexOf(a) === 0&&(chord = ['G3', 'Bb3', 'D4'])
+            props.answer.indexOf(a) === 1&&(chord = ["A3", "C3", "Eb4"])
+            props.answer.indexOf(a) === 2&&(chord = ["Bb3", "D3", "F4"])
+            props.answer.indexOf(a) === 3&&(chord = ["C3", "Eb3", "G4"])
+            props.answer.indexOf(a) === 4&&(chord = ["D4", "F#4", "A4"])
+            props.answer.indexOf(a) === 5&&(chord = ["Eb3", "G4", "Bb4"])
+            props.answer.indexOf(a) === 6&&(chord = ['F3', 'A4', 'C4'])
+        }
         if (props.keyz === 'A♭' && props.major === true) { 
             props.answer.indexOf(a) === 0&&(chord = ['Ab3', 'C3', 'Eb3'])
             props.answer.indexOf(a) === 1&&(chord = ["Bb3", "Db3", "F3"])
